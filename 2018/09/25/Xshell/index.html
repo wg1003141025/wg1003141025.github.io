@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="基础命令操作 命令cd：cd /app 切换到目录/app ​                cd dir 切换到当前目录下的dir目录 ​                cd / 切换到根目录 ​                cd .. 切换到上一级目录 ​                cd ~ 切换到用户目录，比如是root用户，则切换到/root下   列出文件：ls  新建文件：mkd">
+<meta name="description" content="基础命令操作 命令cd：cd /app 切换到目录/app ​                cd dir 切换到当前目录下的dir目录 ​                cd / 切换到根目录 ​                cd .. 切换到上一级目录 ​                cd ~ 切换到用户目录，比如是root用户，则切换到/root下   列出文件：ls、ll  新建文件：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Xshell的一些命令操作">
 <meta property="og:url" content="http://yoursite.com/2018/09/25/Xshell/index.html">
 <meta property="og:site_name" content="Quan&#39;s Blog">
-<meta property="og:description" content="基础命令操作 命令cd：cd /app 切换到目录/app ​                cd dir 切换到当前目录下的dir目录 ​                cd / 切换到根目录 ​                cd .. 切换到上一级目录 ​                cd ~ 切换到用户目录，比如是root用户，则切换到/root下   列出文件：ls  新建文件：mkd">
+<meta property="og:description" content="基础命令操作 命令cd：cd /app 切换到目录/app ​                cd dir 切换到当前目录下的dir目录 ​                cd / 切换到根目录 ​                cd .. 切换到上一级目录 ​                cd ~ 切换到用户目录，比如是root用户，则切换到/root下   列出文件：ls、ll  新建文件：">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-20T10:32:12.576Z">
+<meta property="og:updated_time" content="2018-11-07T09:28:43.675Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Xshell的一些命令操作">
-<meta name="twitter:description" content="基础命令操作 命令cd：cd /app 切换到目录/app ​                cd dir 切换到当前目录下的dir目录 ​                cd / 切换到根目录 ​                cd .. 切换到上一级目录 ​                cd ~ 切换到用户目录，比如是root用户，则切换到/root下   列出文件：ls  新建文件：mkd">
+<meta name="twitter:description" content="基础命令操作 命令cd：cd /app 切换到目录/app ​                cd dir 切换到当前目录下的dir目录 ​                cd / 切换到根目录 ​                cd .. 切换到上一级目录 ​                cd ~ 切换到用户目录，比如是root用户，则切换到/root下   列出文件：ls、ll  新建文件：">
 
 
 
@@ -306,16 +306,10 @@
 <p>​                cd .. 切换到上一级目录</p>
 <p>​                cd ~ 切换到用户目录，比如是root用户，则切换到/root下 </p>
 </li>
-<li><p><strong>列出文件</strong>：ls</p>
+<li><p><strong>列出文件</strong>：ls、ll</p>
 </li>
 <li><p><strong>新建文件</strong>：mkdir afile 在当前目录新建名为afile的目录</p>
 <p>​                   mkdir -p this/that/theother 在当前目录下建立指定的嵌套子目录</p>
-</li>
-</ol>
-<ol start="4">
-<li><p><strong>复制文件</strong>：cp afile afile.bak 把文件复制为新文件afile.bak</p>
-<p>​                   cp afile /app 把文件afile从当前目录复制到/app/目录下</p>
-<p>​                   cp * /app 把当前目录下的所有未隐藏文件复制到/app/目录下</p>
 </li>
 <li><p><strong>移动/重命名文件</strong>：mv aflie bfile 将afile重命名为bfile</p>
 <p>​                                mv afile /app 把当前目录下的afile移动到/app/目录下</p>
@@ -330,21 +324,15 @@
 <p>​                   more命令也可以通过管道符(|)与其他的命令一起使用,例如：ps ux|more   ls|more</p>
 <p>​                   less /etc/passwd 查看/etc/passwd的内容</p>
 </li>
-</ol>
-<ol start="8">
 <li><p><strong>搜索文件内容</strong>：grep bible /etc/exports 在文件exports中查找包含bible的所有行</p>
 <p>​                           tail -100 /var/log/apache/access.log|grep 404 在WEB服务器日志文件access.log的                                  后100行中查找包含“404”的行</p>
 <p>​                           tail -100 /var/log/apache/access.log|grep -v googlebot 在WEB服务器日志文件access.log的后100行中，查找没有被google访问的行</p>
 <p>​                           grep -v ^# /etc/apache2/httpd.conf 在主apache配置文件中，查找所有非注释行</p>
 </li>
-</ol>
-<ol start="9">
 <li><p><strong>查找文件</strong>：find .-name *.rpm 在当前目录中查找rpm包 </p>
 <p>​                   find .|grep page 在当前目录及其子目录中查找文件名包含page的文件</p>
 <p>​                   locate traceroute 在系统的任何地方查找文件名包含traceroute的文件</p>
 </li>
-</ol>
-<ol start="10">
 <li><p><strong>编辑文件：</strong>vi /etc/bubby.txt 用vi编辑文件/etc/bubby.txt</p>
 <p>​                    vim /etc/bubby.txt 用vi编辑文件/etc/bubby.txt 快捷操作：</p>
 <p>​                            切换窗口：alt+1,alt+2 </p>
@@ -355,15 +343,15 @@
 <p>​                            :vsp 纵向切换界面窗口   方便多文件对照编码</p>
 <p>​                            emacs /etc/bubby.txt 用emacs编辑文件/etc/bubby.txt</p>
 </li>
-</ol>
-<ol start="11">
 <li><p><strong>文件上传/下载：</strong>rz 上传文件</p>
 <p>​                             sz down文件</p>
 </li>
 <li><p><strong>显示文件内容：</strong>cat file</p>
-<p>​</p>
+</li>
+<li><p><strong>解压文件：</strong> unzip</p>
 </li>
 </ol>
+<p>​</p>
 
       
     </div>
